@@ -1,0 +1,251 @@
+/* 布局 */
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/* header-container */
+
+.header-container, .tabbar-container{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    z-index: 100;
+}
+.header-container{
+    top: 0;
+    background-color: rgba(222, 24, 27, 0.9);
+}
+/* main-container */
+.main-container{
+padding-top: 2.5rem;
+background-color: #eee;
+}
+/* slider-container */
+.slider-container{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 9.35rem;
+}
+.slider-item-container,
+.slider-item,
+.slider-link,
+.slider-img{
+    width: 100%;
+    height: 100%;
+}
+.slider-item-container{
+    display: flex;
+    transition: transform 0;
+}
+.slider-item{
+    flex-shrink: 0;
+}
+.slider-link{
+    display: block;
+}
+.slider-indicator-container{
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+.slider-indicator{
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    opacity: 0.2;
+    border-radius: 50%;
+    margin-right:0.4rem;
+    background-color: #000;
+}
+.slider-indicator-active{
+    background-color: #007aff;
+    opacity: 1;
+}
+/* nav-container */
+.nav-container{
+background-color: #fff;
+margin:0 0 0.5rem 0;
+}
+/* footer */
+.tabbar-container{
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(151,151,141,0.6);
+}
+
+/* 组件 */
+/* 头部导航 */
+.navbar{
+    display: flex;
+    height: 100%;
+}
+.navbar-left,
+.navbar-center,
+.navbar-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.navbar-left,
+.navbar-right{
+    width: 2.2rem;
+}
+.navbar-center{
+    flex: 1;
+}
+.navbar-left .iconfont,
+.navbar-right .iconfont{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.searchBox{
+    display: flex;
+    width: 100%;
+    height: 1.6rem;
+    border-radius: 0.8rem;
+    background-color: #fff;
+}
+.searchBox-input,
+.searchBox-prepend{
+    height: 100%;
+}
+.searchBox-prepend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.6rem;
+}
+.searchBox-input{
+    flex: 1;
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.8rem 0 0.4rem;
+}
+.nav-item{
+    width: 20%;
+    margin-bottom: 0.4rem;
+}
+.nav-link{
+    display: block;
+    text-align: center;
+}
+.nav-img{
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-bottom:0.2rem ;
+}
+.nav-text{
+  display: block;
+}
+.tabbar,
+.tabbar-item,
+.tabbar-link{
+height:100%
+}
+.tabbar{
+    display: flex;
+}
+.tabbar-item{
+    width: 25%;
+}
+.tabbar-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tabbar-link .iconfont{
+    font-size: 1.2rem;
+}
+.tabbar-item-active .tabbar-link{
+    color: rgba(222, 24, 27, 0.9);
+}
+/* 轮播图 */
+
+/* 内容区 */
+/* recommmend */
+.recommend{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+.recommend-item{
+    width:49.33333%;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.12);
+    margin-bottom: 0.215rem;
+}
+.recommend-link{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.recommend-pic{
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+.recommend-img{
+ width: 100%;
+ height: 9.25rem;
+}
+.recommend-name,
+.recommend-origPrice,
+.recommend-info{
+    padding: 0 0.25rem;
+    margin-bottom: 0.4rem;
+}
+.recommend-name{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.recommend-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.recommend-price{
+    color: rgba(222, 24, 27, 0.9);
+}
+[data-dpr="2"] .recommend-price-num{
+    font-size: 40px;
+}
+[data-dpr="3"] .recommend-price-num{
+    font-size: 60px;
+}
+.recommend-count{
+    color: #999;
+}
+/* footer */
+.backtop {
+    position: fixed;
+    /*20px*/
+    right: 0.5rem;
+    /*120px*/
+    bottom: 3.0rem;
+    width: 3.0rem;
+    height: 3.0rem;
+    line-height: 3.0rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+}
+[data-dpr="2"] .backtop {
+    font-size: 32px;
+}
+[data-dpr="3"] .backtop {
+    font-size: 48px;
+}
+/* 内容 */
